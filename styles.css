@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Hide overflow to contain animation */
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradient background */
+    animation: slideBg 10s linear infinite; /* Background animation */
+}
+
+@keyframes slideBg {
+    0% {
+        background-position: 0% 0%; /* Start with background at top left */
+    }
+    100% {
+        background-position: 100% 100%; /* Background scrolls down and right */
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for color change and transform */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+    transform: scale(1.1); /* Scale up the button on hover */
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+@keyframes success {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.success-animation {
+    animation: success 0.5s ease-in-out;
+}
